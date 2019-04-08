@@ -32,7 +32,7 @@ class KahanSum {
 
   KahanSum & operator += (const DATATYPE & x) {
 
-    if (std::abs(sum) >= std::abs(x)) {
+    if (std::abs((long) sum) >= std::abs((long) x)) {
       carry += x;
       DATATYPE newsum = sum + carry;
       carry = carry - (newsum - sum);
